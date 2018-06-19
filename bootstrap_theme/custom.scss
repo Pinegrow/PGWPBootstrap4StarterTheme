@@ -1,0 +1,21 @@
+/* Bootstrap theme customized with Pinegrow Web Editor */
+/* Vars go before the @import */
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$violet: #271044;
+$tabasco: #972215;
+$primary: $purple;
+$enable-rounded: false;
+
+/* Import the Bootstrap files */
+@import "bootstrap/bootstrap";
+
+/* Import the Additional files */
+@import "understrap/understrap";
+@import "understrap/woocommerce";
+@import "underscores/galleries";
+
+// @import "theme/contact-form7";
+/* Custom CSS rules come here */

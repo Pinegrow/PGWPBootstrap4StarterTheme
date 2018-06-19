@@ -1,0 +1,11 @@
+// Fix billing field wrapper
+.woocommerce-input-wrapper {
+    width: 100%;
+}
+
+// Fix Stripe input fields for CC payment https://github.com/understrap/understrap/issues/682
+.stripe-card-group,
+.woocommerce-account .StripeElement,
+.woocommerce-checkout .StripeElement {
+    width: 100%;
+}
