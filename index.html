@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" wp-site wp-site-is-master-page wp-site-theme-name="st2" wp-site-theme-slug="st2" wp-site-preview-url="${st2url}" wp-site-themes-folder="${st2}">
-    <head>
+    <head data-pg-collapsed>
         <meta charset="utf-8" wp-no-export>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,10 +26,10 @@
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
                             <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true">
-                                <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home><a rel="home" href="#" cms-site-name>ST2</a></h1>
+                                <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home data-pg-collapsed><a rel="home" href="#" cms-site-name>ST2</a></h1>
                                 <a rel="home" class="navbar-brand" href="#" cms-site-name wp-else-if wp-hide>ST2</a>
                             </div>
-                            <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo"></div>
+                            <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo" wp-else-if></div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>
