@@ -184,20 +184,20 @@ function st2_customize_register( $wp_customize ) {
     /* Pinegrow generated Customizer Controls Begin */
 
     $wp_customize->add_section( 'footer_settings', array(
-        'title' => __( 'Footer Settings', 'st2' ),
+        'title' => __( 'ST2 Footer Settings', 'st2' ),
         'description' => __( 'Footer Settings', 'st2' ),
         'priority' => '2'
     ));
 
     $wp_customize->add_section( 'header_settings', array(
-        'title' => __( 'Header Settings', 'st2' ),
+        'title' => __( 'ST2 Header Settings', 'st2' ),
         'description' => __( 'Header Settings', 'st2' ),
         'priority' => '1'
     ));
 
     $wp_customize->add_section( 'theme_settings', array(
-        'title' => __( 'Theme Settings', 'st2' ),
-        'description' => __( 'Theme Settings', 'st2' ),
+        'title' => __( 'ST2 Theme Settings', 'st2' ),
+        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'st2' ),
         'priority' => '0'
     ));
 
@@ -231,7 +231,7 @@ function st2_customize_register( $wp_customize ) {
         'label' => __( 'Show Jumbotron', 'st2' ),
         'description' => __( 'Activate the Jumbotron', 'st2' ),
         'type' => 'checkbox',
-        'section' => 'theme_settings'
+        'section' => 'header_settings'
     ));
 
     $wp_customize->add_setting( 'jumbotron_bg_color', array(
