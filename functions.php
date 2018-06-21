@@ -278,6 +278,8 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
+    wp_enqueue_script( 'jquery' );
+
     wp_deregister_script( 'carousel_init' );
     wp_enqueue_script( 'carousel_init', get_template_directory_uri() . '/assets/js/carousel_init.js', false, null, true);
 
