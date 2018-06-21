@@ -223,27 +223,6 @@ function st2_customize_register( $wp_customize ) {
         'section' => 'theme_settings'
     ));
 
-    $wp_customize->add_setting( 'body_color', array(
-        'type' => 'theme_mod'
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'body_color', array(
-        'label' => __( 'Body Color', 'st2' ),
-        'type' => 'color',
-        'section' => 'theme_settings'
-    ) ) );
-
-    $wp_customize->add_setting( 'body_background', array(
-        'type' => 'theme_mod'
-    ));
-
-    $wp_customize->add_control( new WP_Customize_Media_Control( $wp_customize, 'body_background', array(
-        'label' => __( 'Body Background Images', 'st2' ),
-        'type' => 'media',
-        'mime_type' => 'image',
-        'section' => 'theme_settings'
-    ) ) );
-
     $wp_customize->add_setting( 'show_jumbotron', array(
         'type' => 'theme_mod'
     ));
