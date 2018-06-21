@@ -293,9 +293,6 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'style' );
-    wp_enqueue_style( 'style', get_bloginfo('stylesheet_url'), false, null, 'all');
-
     wp_deregister_style( 'woocommerce' );
     wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/bootstrap_theme/woocommerce.css', false, null, 'all');
 
