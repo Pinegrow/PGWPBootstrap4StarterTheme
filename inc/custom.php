@@ -13,6 +13,36 @@ if ( ! isset( $content_width ) ) {
 // Customize Selective Refresh Widget
 add_theme_support( 'customize-selective-refresh-widgets' );
 
+// Set up the WordPress core custom background feature.
+add_theme_support( 'custom-background', apply_filters( 'st2_custom_background_args', array(
+	'default-color' => 'ffffff',
+	'default-image' => '',
+) ) );
+
+// Set up the WordPress Theme logo feature.
+add_theme_support( 'custom-logo' );
+
+// Filter custom logo with correct classes.
+add_filter( 'get_custom_logo', 'st2_change_logo_class' );
+
+if ( ! function_exists( 'st2_change_logo_class' ) ) {
+	/**
+	 * Replaces logo CSS class.
+	 *
+	 * @param string $html Markup.
+	 *
+	 * @return mixed
+	 */
+	function st2_change_logo_class( $html ) {
+
+		$html = str_replace( 'class="custom-logo"', 'class="img-fluid"', $html );
+		$html = str_replace( 'class="custom-logo-link"', 'class="navbar-brand custom-logo-link"', $html );
+		$html = str_replace( 'alt=""', 'title="Home" alt="logo"' , $html );
+
+		return $html;
+	}
+}
+
 
     // EDITOR TWEAKS
     // Load Editor functions.

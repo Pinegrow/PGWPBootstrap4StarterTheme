@@ -18,18 +18,22 @@
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
     </head>
-    <body wp-body-class cms-editable="body_color" cms-editable-type="background-color" cms-editable-label="Body Color" cms-editable-style-important cms-editable-section="theme_settings" cms-editable-2="body_background" cms-editable-label-2="Body Background Images" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section-2="theme_settings" cms-editable-style-important-2>
+    <body wp-body-class="ezrezr">
         <div class="hfeed site" id="page">
             <header>
-                <div itemscope="" itemtype="http://schema.org/WebSite" data-pg-collapsed id="wrapper-navbar">
+                <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
                     <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
-                            <a class="navbar-brand" href="#" cms-site-name>ST2</a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
+                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true" data-pg-collapsed>
+                                <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home><a rel="home" href="#" cms-site-name>ST2</a></h1>
+                                <a rel="home" class="navbar-brand" href="#" cms-site-name wp-else-if wp-hide>ST2</a>
+                            </div>
+                            <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo"></div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" data-pg-collapsed> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarToggler6"> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6" data-pg-collapsed> 
                                 <ul class="navbar-nav mt-2 mt-lg-0 ml-auto " wp-nav-menu="primary" wp-nav-menu-type="bootstrap4" wp-if-has-nav-menu="primary" wp-nav-menu-depth="2"> 
                                     <li class="nav-item active"> 
                                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> 
@@ -53,7 +57,7 @@
                         </div>                         
                     </nav>
                 </div>
-                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="theme_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron" data-pg-collapsed>
+                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron" data-pg-collapsed>
                     <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings" data-pg-collapsed> 
                         <div class="container">
                             <h1 class="display-3" style="color:#ffffff;">Starter Theme <b>2</b></h1>
