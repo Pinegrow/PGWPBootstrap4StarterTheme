@@ -48,3 +48,11 @@ pre {
     max-width: 100%;
     height: auto;
 }
+
+h1.navbar-brand > a {
+    text-decoration: none;
+}
+
+#page {
+    word-wrap: break-word;
+}
