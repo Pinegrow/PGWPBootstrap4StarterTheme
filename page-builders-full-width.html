@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" wp-site wp-site-master-page="index.html" wp-page-template="ST2 Page Builders Full Width" wp-master-page>
+    <head>
+        <meta charset="utf-8" wp-no-export>
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>Pinegrow Starter Theme 2</title>
+        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+        <link href="style.css" rel="stylesheet" type="text/css" wp-no-export>
+        <link href="bootstrap_theme/woocommerce.css" rel="stylesheet" type="text/css">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/theme.css" rel="stylesheet" type="text/css">
+    </head>
+    <body wp-body-class>
+        <div class="hfeed site" id="page">
+            <header>
+                <div itemscope="" itemtype="http://schema.org/WebSite" data-pg-collapsed id="wrapper-navbar">
+                    <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
+                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-pg-collapsed> 
+                        <div class="container">
+                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true" data-pg-collapsed>
+                                <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home><a rel="home" href="#" cms-site-name>ST2</a></h1>
+                                <a rel="home" class="navbar-brand" href="#" cms-site-name wp-else-if wp-hide>ST2</a>
+                            </div>
+                            <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo" wp-else-if></div>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" data-pg-collapsed> 
+                                <span class="navbar-toggler-icon"></span> 
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarToggler6" data-pg-collapsed> 
+                                <ul class="navbar-nav mt-2 mt-lg-0 ml-auto " wp-nav-menu="primary" wp-nav-menu-type="bootstrap4" wp-if-has-nav-menu="primary" wp-nav-menu-depth="2"> 
+                                    <li class="nav-item active"> 
+                                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> 
+                                    </li>                                     
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" href="#">Link</a> 
+                                    </li>                                     
+                                    <li class="nav-item"> 
+                                        <a class="nav-link disabled" href="#">Disabled</a> 
+                                    </li>                                     
+                                    <li class="nav-item dropdown"> 
+                                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                                    Dropdown link                                </a> 
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"> 
+                                            <a class="dropdown-item" href="#">Action</a> 
+                                            <a class="dropdown-item" href="#">Another action</a> 
+                                            <a class="dropdown-item" href="#">Something else here</a> 
+                                        </div>                                         
+                                    </li>                                     
+                                </ul>                                 
+                            </div>
+                        </div>                         
+                    </nav>
+                </div>
+            </header>
+            <div wp-site-content>
+                <div wp-loop wp-loop-show-empty-text="false" wp-the-content data-pg-collapsed>
+                    <div class="container" data-pg-collapsed>
+                        <div class="row">
+                            <div data-pg-collapsed class="col-md-12">
+                                <h3 class="text-center text-muted">Blank Template For Page Builders</h3> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper" id="wrapper-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <footer class="site-footer" id="colophon">
+                                <div class="site-info">
+                                    <p cms-editable="footer_text" cms-editable-type="content" cms-editable-label="Footer Content" cms-editable-section="footer_settings" cms-editable-textarea>Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)</p>
+                                </div>
+                                <!-- .site-info -->
+                            </footer>
+                            <!-- #colophon -->
+                        </div>
+                        <!--col end -->
+                    </div>
+                </div>
+                <!-- container end -->
+            </div>
+        </div>
+        <script src="assets/js/jquery-1.12.4.min.js" wp-no-export></script>
+        <script src="assets/js/carousel_init.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
