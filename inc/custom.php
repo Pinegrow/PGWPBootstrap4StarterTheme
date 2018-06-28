@@ -183,4 +183,17 @@ if ( ! function_exists ( 'st2_components_social_menu' ) ) {
 		}
 	}
 }
+
+
+	// Temporary Hotfix for authenticated arbitrary file deletion vulnerability in the WordPress core
+	// https://blog.ripstech.com/2018/wordpress-file-delete-to-code-execution/
+	add_filter( 'wp_update_attachment_metadata', 'st2_rips_unlink_tempfix' );
+
+	function st2_rips_unlink_tempfix( $data ) {
+		if( isset($data['thumb']) ) {
+			$data['thumb'] = basename($data['thumb']);
+		}
+	
+		return $data;
+	}
 ?>
