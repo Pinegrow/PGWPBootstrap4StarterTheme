@@ -90,26 +90,6 @@ function st2_widgets_init() {
     /* Pinegrow generated Register Sidebars Begin */
 
     register_sidebar( array(
-        'name' => __( 'Left Sidebar', 'st2' ),
-        'id' => 'left-sidebar',
-        'description' => 'Left Sidebar',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Right Sidebar', 'st2' ),
-        'id' => 'right-sidebar',
-        'description' => 'Right Sidebar',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>'
-    ) );
-
-    register_sidebar( array(
         'name' => __( 'Hero Slider', 'st2' ),
         'id' => 'hero',
         'description' => 'Hero slider area. Place two or more widgets here and they will slide!',
@@ -201,28 +181,6 @@ function st2_customize_register( $wp_customize ) {
         'priority' => '0'
     ));
 
-    $wp_customize->add_setting( 'show_left_sidebar', array(
-        'type' => 'theme_mod'
-    ));
-
-    $wp_customize->add_control( 'show_left_sidebar', array(
-        'label' => __( 'Show Left Sidebar', 'st2' ),
-        'description' => __( 'Activate the Left Sidebar', 'st2' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
-    $wp_customize->add_setting( 'show_right_sidebar', array(
-        'type' => 'theme_mod'
-    ));
-
-    $wp_customize->add_control( 'show_right_sidebar', array(
-        'label' => __( 'Show Right Sidebar', 'st2' ),
-        'description' => __( 'Activate the Right Sidebar', 'st2' ),
-        'type' => 'checkbox',
-        'section' => 'theme_settings'
-    ));
-
     $wp_customize->add_setting( 'show_jumbotron', array(
         'type' => 'theme_mod'
     ));
@@ -254,6 +212,28 @@ function st2_customize_register( $wp_customize ) {
         'mime_type' => 'image',
         'section' => 'header_settings'
     ) ) );
+
+    $wp_customize->add_setting( 'show_left_sidebar', array(
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize->add_control( 'show_left_sidebar', array(
+        'label' => __( 'Show Left Sidebar', 'st2' ),
+        'description' => __( 'Activate the Left Sidebar', 'st2' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
+
+    $wp_customize->add_setting( 'show_right_sidebar', array(
+        'type' => 'theme_mod'
+    ));
+
+    $wp_customize->add_control( 'show_right_sidebar', array(
+        'label' => __( 'Show Right Sidebar', 'st2' ),
+        'description' => __( 'Activate the Right Sidebar', 'st2' ),
+        'type' => 'checkbox',
+        'section' => 'theme_settings'
+    ));
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',

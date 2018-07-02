@@ -20,7 +20,7 @@
     </head>
     <body wp-body-class="ezrezr">
         <div class="hfeed site" id="page">
-            <header>
+            <header data-pg-collapsed>
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
                     <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-pg-collapsed> 
@@ -114,9 +114,9 @@
                     </div>
                 </div>
             </header>
-            <div wp-site-content>
+            <div wp-site-content data-pg-collapsed>
                 <div class="wrapper" id="index-wrapper">
-                    <div class="container " id="content" tabindex="-1" data-pg-collapsed>
+                    <div class="container " id="content" tabindex="-1">
                         <div class="row">
                             <div class="col-md-4 widget-area" wp-cz-control="show_left_sidebar" wp-cz-control-label="Show Left Sidebar" wp-cz-control-type="checkbox" wp-cz-control-section="theme_settings" wp-if-get-theme-mod="show_left_sidebar" wp-cz-control-description="Activate the Left Sidebar" role="complementary" id="left-sidebar" wp-hide>
                                 <aside wp-register-sidebar="Left Sidebar" wp-register-sidebar-id="left-sidebar" wp-register-sidebar-before="<aside id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</aside>" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-register-sidebar-description="Left Sidebar widget area" wp-dynamic-sidebar="left-sidebar" wp-dynamic-sidebar-set="element"></aside>
@@ -156,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull">
+            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-collapsed>
                 <div id="footer-full-content" tabindex="-1" class="container" data-pg-collapsed>
                     <div class="row">
                         <div id="custom_html-2" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4" wp-register-sidebar="Bottom Full" wp-register-sidebar-id="footerfull" wp-register-sidebar-description="Full bottom widget with dynamic grid" wp-register-sidebar-after="</div><!-- .footer-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="footerfull" wp-dynamic-sidebar-set="element" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'&quot;>'">
