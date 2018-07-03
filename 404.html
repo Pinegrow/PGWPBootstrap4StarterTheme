@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" wp-site wp-site-master-page="index.html" wp-site-preview-url="http://localhost:3000/privacy-policy/ererz">
-    <head data-pg-collapsed>
+    <head>
         <meta charset="utf-8" wp-no-export>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,20 +20,20 @@
     </head>
     <body wp-body-class="ezrezr">
         <div class="hfeed site" id="page">
-            <header data-pg-collapsed>
+            <header>
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
                     <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
-                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-pg-collapsed> 
+                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
-                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true" data-pg-collapsed>
+                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true">
                                 <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home><a rel="home" href="#" cms-site-name>ST2</a></h1>
                                 <a rel="home" class="navbar-brand" href="#" cms-site-name wp-else-if wp-hide>ST2</a>
                             </div>
                             <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo" wp-else-if></div>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" data-pg-collapsed> 
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> 
                                 <span class="navbar-toggler-icon"></span> 
                             </button>
-                            <div class="collapse navbar-collapse" id="navbarToggler6" data-pg-collapsed> 
+                            <div class="collapse navbar-collapse" id="navbarToggler6"> 
                                 <ul class="navbar-nav mt-2 mt-lg-0 ml-auto " wp-nav-menu="primary" wp-nav-menu-type="bootstrap4" wp-if-has-nav-menu="primary" wp-nav-menu-depth="2"> 
                                     <li class="nav-item active"> 
                                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a> 
@@ -57,7 +57,7 @@
                         </div>                         
                     </nav>
                 </div>
-                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron" data-pg-collapsed>
+                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron">
                     <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings">
                         <div class="container">
                             <h1 class="display-3" style="color:#ffffff;">Starter Theme <b>2</b></h1>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero" data-pg-collapsed>
+                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero">
                     <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover" wp-hide>
                         <div class="carousel-inner">
                             <div class="widget_text carousel-item" wp-register-sidebar="Hero Slider" wp-register-sidebar-id="hero" wp-register-sidebar-description="Hero slider area. Place two or more widgets here and they will slide!" wp-register-sidebar-before="<div class=&quot;carousel-item&quot;>" wp-register-sidebar-after="</div>" wp-dynamic-sidebar="hero" wp-register-sidebar-before-title=" " wp-register-sidebar-after-title=" " wp-dynamic-sidebar-set="element" data-pg-name="Carousel Slide">
@@ -95,7 +95,7 @@
                 </div>
                 <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="herocanvas" wp-register-sidebar="Hero Canvas" wp-register-sidebar-id="herocanvas" wp-register-sidebar-description="Full size canvas hero area for Bootstrap and other custom HTML markup" wp-register-sidebar-before="''" wp-register-sidebar-after="''" wp-register-sidebar-before-title="''" wp-register-sidebar-after-title="''" wp-dynamic-sidebar="herocanvas">
 </div>
-                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero" data-pg-collapsed>
+                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero">
                     <div id="wrapper-static-content" tabindex="-1" class="container">
                         <div class="row">
                             <div id="custom_html-6" class="widget_text static-hero-widget widget_custom_html widget-count-2 col-md-6" wp-register-sidebar="Top Full" wp-register-sidebar-id="statichero" wp-register-sidebar-description="Full top widget with dynamic grid" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'&quot;>'" wp-register-sidebar-after="</div><!-- .static-hero-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="statichero" wp-dynamic-sidebar-set="element">
@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </header>
-            <div wp-site-content data-pg-collapsed>
+            <div wp-site-content>
                 <div class="wrapper" id="error-404-wrapper" tabindex="-1">
                     <div class="container " id="content" tabindex="-1">
                         <div class="row">
@@ -127,14 +127,14 @@
                                         <!-- .page-header -->
                                         <div class="page-content">
                                             <p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
-                                            <form method="get" id="searchform" action="//localhost:3000/" role="search" wp-get-search-form>
-                                                <div class="input-group" data-pg-collapsed>
+                                            <form method="get" id="searchform" action="#" role="search" wp-get-search-form>
+                                                <div class="input-group">
                                                     <input class="field form-control" id="s" name="s" placeholder="Search …" value="" type="text">
                                                     <span class="input-group-append"> <input class="submit btn btn-primary" id="searchsubmit" name="submit" value="Search" type="submit"> </span>
                                                 </div>
                                             </form>
                                             <div class="mt-4 mb-2" data-pg-name="Spacer"></div>
-                                            <div class="widget widget_recent_entries" wp-the-widget="WP_Widget_Recent_Posts" wp-the-widget-number="5" data-pg-collapsed> 
+                                            <div class="widget widget_recent_entries" wp-the-widget="WP_Widget_Recent_Posts" wp-the-widget-number="5"> 
                                                 <h2 class="widgettitle">Recent Posts</h2> 
                                                 <ul>
                                                     <li>
@@ -157,19 +157,19 @@
                                             <div class="mt-4 mb-2" data-pg-name="Spacer"></div>
                                             <h2 class="widget-title">Most Used Categories</h2>
                                             <div class="widget widget_categories">
-                                                <ul wp-list-categories wp-list-categories-set="content" wp-list-categories-orderby="count" wp-list-categories-order="DESC" wp-list-categories-title-li="''" wp-list-categories-show-count="true" data-pg-collapsed>
+                                                <ul wp-list-categories wp-list-categories-set="content" wp-list-categories-orderby="count" wp-list-categories-order="DESC" wp-list-categories-title-li="''" wp-list-categories-show-count="true">
                                                     <li>
                                                         <a href="#">Category</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                             <div class="mt-4 mb-2" data-pg-name="Spacer"></div>
-                                            <div class="widget widget_tag_cloud" wp-the-widget="WP_Widget_Tag_Cloud" data-pg-collapsed>
+                                            <div class="widget widget_tag_cloud" wp-the-widget="WP_Widget_Tag_Cloud">
                                                 <h2 class="widgettitle">Tags</h2>
                                                 <div class="tagcloud">
                                                     <a href="#" class="tag-cloud-link tag-link-35 tag-link-position-1" style="font-size: 8pt;" aria-label="Gutenberg (1 item)">Gutenberg</a>
                                                     <a href="#" class="tag-cloud-link tag-link-36 tag-link-position-2" style="font-size: 22pt;" aria-label="Misc (2 items)">Misc</a>
-                                                    <a href="#" class="tag-cloud-link tag-link-34 tag-link-position-3" style="font-size: 8pt;" aria-label="understrap (1 item)">understrap</a>
+                                                    <a href="#" class="tag-cloud-link tag-link-34 tag-link-position-3" style="font-size: 8pt;" aria-label="st2 (1 item)">st2</a>
                                                     <a href="#" class="tag-cloud-link tag-link-32 tag-link-position-4" style="font-size: 8pt;" aria-label="woocommerce (1 item)">woocommerce</a>
                                                     <a href="#" class="tag-cloud-link tag-link-33 tag-link-position-5" style="font-size: 8pt;" aria-label="wordpress (1 item)">wordpress</a>
                                                 </div>
@@ -185,8 +185,8 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-collapsed>
-                <div id="footer-full-content" tabindex="-1" class="container" data-pg-collapsed>
+            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull">
+                <div id="footer-full-content" tabindex="-1" class="container">
                     <div class="row">
                         <div id="custom_html-2" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4" wp-register-sidebar="Bottom Full" wp-register-sidebar-id="footerfull" wp-register-sidebar-description="Full bottom widget with dynamic grid" wp-register-sidebar-after="</div><!-- .footer-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="footerfull" wp-dynamic-sidebar-set="element" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'&quot;>'">
                             <h3 class="widget-title">Sample Footer Widget</h3>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer" data-pg-collapsed>
+            <div class="wrapper" id="wrapper-footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
