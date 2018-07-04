@@ -8,5 +8,18 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: st2
+Tags: one-column, custom-menu, featured-images, theme-options, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+ST2 is based on UnderStrap https://github.com/understrap/understrap which is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+
+Resource Licenses:
+Bootstrap: http://getbootstrap.com | https://github.com/twbs/bootstrap/blob/master/LICENSE (Code licensed under MIT, documentation under CC BY 3.0.)
+jQuery: https://jquery.org | (Code licensed under MIT)
 */
+
+/*
+This file is just used to identify the theme in WordPress.
+*/
+
 /* Don't add custom styles here, but in assets/sass/theme.scss */
