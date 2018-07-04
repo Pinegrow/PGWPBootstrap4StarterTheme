@@ -1,4 +1,5 @@
 <?php
+// Pinegrow Starter Theme 2
 // THEME TWEAKS
 
 // Remove WordPress Emoji Things
@@ -196,4 +197,17 @@ if ( ! function_exists ( 'st2_components_social_menu' ) ) {
 	
 		return $data;
 	}
+
+	// Theme Check Fix comment-reply
+	// https://codex.wordpress.org/Migrating_Plugins_and_Themes_to_2.7/Enhanced_Comment_Display
+
+	if ( ! function_exists( 'st2_comment_reply' ) ) {
+		function st2_comment_reply() {
+				if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+				wp_enqueue_script( 'comment-reply' );
+			}
+		}
+	}
+	
+	add_action( 'wp_enqueue_scripts', 'st2_comment_reply' );
 ?>

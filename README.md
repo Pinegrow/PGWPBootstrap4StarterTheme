@@ -25,6 +25,10 @@ The Pinegrow WordPress Starter Theme is deeply inspired by the [UnderStrap theme
 - Built-in slider: Standard Bootstrap 4.x slider component
 - And more ...
 
+## Recommended Plugins
+
+- Widget Logic [https://wordpress.org/plugins/widget-logic/](https://wordpress.org/plugins/widget-logic/)
+
 # Licenses & Credits
 - Understrap: [https://understrap.com](https://understrap.com)
 - WooCommerce: [https://woocommerce.com/](https://woocommerce.com/)

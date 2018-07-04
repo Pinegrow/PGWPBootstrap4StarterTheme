@@ -21,7 +21,7 @@
     <body wp-body-class="ezrezr">
         <div class="hfeed site" id="page">
             <header data-pg-collapsed>
-                <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
+                <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar" data-pg-collapsed>
                     <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-pg-collapsed> 
                         <div class="container">
@@ -58,14 +58,14 @@
                     </nav>
                 </div>
                 <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron" data-pg-collapsed>
-                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings">
+                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings" data-pg-collapsed>
                         <div class="container">
-                            <h1 class="display-3" style="color:#ffffff;">Starter Theme <b>2</b></h1>
-                            <p class="lead" style="color:#c0db4b;">Powered with Bootstrap 4 + jQuery Core 1.12.4 and SASS.</p>
+                            <h1 class="display-3">Starter Theme <b>2</b></h1>
+                            <p class="lead">Powered with Bootstrap 4 + jQuery Core 1.12.4 and SASS.</p>
                         </div>
                     </div>
                 </div>
-                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero" data-pg-collapsed>
+                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero" data-pg-collapsed data-pg-name="Hero Carousel">
                     <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover" wp-hide>
                         <div class="carousel-inner">
                             <div class="widget_text carousel-item" wp-register-sidebar="Hero Slider" wp-register-sidebar-id="hero" wp-register-sidebar-description="Hero slider area. Place two or more widgets here and they will slide!" wp-register-sidebar-before="<div class=&quot;carousel-item&quot;>" wp-register-sidebar-after="</div>" wp-dynamic-sidebar="hero" wp-register-sidebar-before-title=" " wp-register-sidebar-after-title=" " wp-dynamic-sidebar-set="element" data-pg-name="Carousel Slide">
@@ -93,9 +93,9 @@
                         <a class="carousel-control-next" href="#HeroCarouselControls" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
                     </div>
                 </div>
-                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="herocanvas" wp-register-sidebar="Hero Canvas" wp-register-sidebar-id="herocanvas" wp-register-sidebar-description="Full size canvas hero area for Bootstrap and other custom HTML markup" wp-register-sidebar-before="''" wp-register-sidebar-after="''" wp-register-sidebar-before-title="''" wp-register-sidebar-after-title="''" wp-dynamic-sidebar="herocanvas">
+                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="herocanvas" wp-register-sidebar="Hero Canvas" wp-register-sidebar-id="herocanvas" wp-register-sidebar-description="Full size canvas hero area for Bootstrap and other custom HTML markup" wp-register-sidebar-before="''" wp-register-sidebar-after="''" wp-register-sidebar-before-title="''" wp-register-sidebar-after-title="''" wp-dynamic-sidebar="herocanvas" data-pg-name="Hero Canvas">
 </div>
-                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero" data-pg-collapsed>
+                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero" data-pg-collapsed data-pg-name="Full Top Widgets">
                     <div id="wrapper-static-content" tabindex="-1" class="container">
                         <div class="row">
                             <div id="custom_html-6" class="widget_text static-hero-widget widget_custom_html widget-count-2 col-md-6" wp-register-sidebar="Top Full" wp-register-sidebar-id="statichero" wp-register-sidebar-description="Full top widget with dynamic grid" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'&quot;>'" wp-register-sidebar-after="</div><!-- .static-hero-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="statichero" wp-dynamic-sidebar-set="element">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-collapsed>
+            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-collapsed data-pg-name="Bottom Full Widgets">
                 <div id="footer-full-content" tabindex="-1" class="container" data-pg-collapsed>
                     <div class="row">
                         <div id="custom_html-2" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4" wp-register-sidebar="Bottom Full" wp-register-sidebar-id="footerfull" wp-register-sidebar-description="Full bottom widget with dynamic grid" wp-register-sidebar-after="</div><!-- .footer-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="footerfull" wp-dynamic-sidebar-set="element" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'&quot;>'">
@@ -176,7 +176,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer" data-pg-collapsed>
+            <div class="wrapper" id="wrapper-footer" data-pg-collapsed data-pg-name="Footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
