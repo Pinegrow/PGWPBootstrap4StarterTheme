@@ -114,8 +114,8 @@
                     </div>
                 </div>
             </header>
-            <div wp-site-content data-pg-collapsed>
-                <div class="wrapper" id="archive-wrapper" data-pg-collapsed>
+            <div wp-site-content>
+                <div class="wrapper" id="archive-wrapper">
                     <div class="container " id="content" tabindex="-1">
                         <div class="row">
                             <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_left_sidebar" role="complementary" id="left-sidebar" wp-hide data-pg-collapsed>
@@ -123,33 +123,35 @@
                                 <h3 wp-no-export>Left Sidebar</h3>
                                 <p wp-no-export>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
                             </div>
-                            <div class="col-md-8 content-area" id="primary" data-pg-collapsed>
+                            <div class="col-md-8 content-area" id="primary">
                                 <main>
-                                    <header class="page-header" data-pg-collapsed>
-                                        <h1 wp-call-function="the_archive_title( '<h1 class=&quot;page-title&quot;>', '</h1>' );">Month: August 2009</h1>
-                                        <div class="taxonomy-description" wp-call-function="the_archive_description( '<div class=&quot;taxonomy-description&quot;>', '</div>' );">Archive description</div>
-                                    </header>
-                                    <article cms-post class="mb-5">
+                                    <div wp-template-part wp-template-part-slug="loop-templates/content-archive" wp-template-part-content wp-include-template-part wp-include-template-part-slug="loop-templates/content-archive" data-pg-name="content-archive template" data-pg-collapsed>
                                         <header class="page-header" data-pg-collapsed>
-                                            <h2 class="entry-title" cms-post-title cms-post-link="not_singular">Post Title</h2>
-                                            <div class="entry-meta" data-pg-collapsed>
-                                                <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
-                                            </div>
+                                            <h1 wp-call-function="the_archive_title( '<h1 class=&quot;page-title&quot;>', '</h1>' );">Month: August 2009</h1>
+                                            <div class="taxonomy-description" wp-call-function="the_archive_description( '<div class=&quot;taxonomy-description&quot;>', '</div>' );">Archive description</div>
                                         </header>
-                                        <img src="assets/gfx/photo-01.jpg" cms-post-image="large">
-                                        <div class="entry-content" data-pg-collapsed>
-                                            <p cms-post-excerpt>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
-                                            <a class="btn btn-primary" wp-get-permalink wp-get-permalink-set="href" href="#">Read More</a>
-                                        </div>
-                                        <footer class="entry-footer"></footer>
-                                    </article>
-                                </main>
-                                <nav aria-label="Posts navigation" data-pg-collapsed>
-                                    <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Newer Posts" wp-posts-nav-link-next-label="Older Posts »" class="text-center">
-                                        <a href="http://starter-theme.loc/">« Newer Posts</a> — 
-                                        <a href="http://starter-theme.loc/page/3/">Older Posts »</a> 
+                                        <article cms-post class="mb-5" data-pg-collapsed>
+                                            <header class="page-header" data-pg-collapsed>
+                                                <h2 class="entry-title" cms-post-title cms-post-link="not_singular">Post Title</h2>
+                                                <div class="entry-meta" data-pg-collapsed>
+                                                    <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
+                                                </div>
+                                            </header>
+                                            <img src="assets/gfx/photo-01.jpg" cms-post-image="large">
+                                            <div class="entry-content" data-pg-collapsed>
+                                                <p cms-post-excerpt>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
+                                                <a class="btn btn-primary" wp-get-permalink wp-get-permalink-set="href" href="#">Read More</a>
+                                            </div>
+                                            <footer class="entry-footer"></footer>
+                                        </article>
+                                        <nav aria-label="Posts navigation" data-pg-collapsed>
+                                            <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Newer Posts" wp-posts-nav-link-next-label="Older Posts »" class="text-center">
+                                                <a href="http://starter-theme.loc/">« Newer Posts</a> — 
+                                                <a href="http://starter-theme.loc/page/3/">Older Posts »</a> 
+                                            </div>
+                                        </nav>
                                     </div>
-                                </nav>                                 
+                                </main>                                 
                             </div>
                             <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_right_sidebar" role="complementary" id="right-sidebar" data-pg-collapsed>
                                 <aside wp-dynamic-sidebar="right-sidebar" wp-dynamic-sidebar-set="element"></aside>

@@ -114,7 +114,7 @@
                     </div>
                 </div>
             </header>
-            <div wp-site-content data-pg-collapsed>
+            <div wp-site-content>
                 <div class="wrapper" id="single-wrapper">
                     <div class="container" id="content" tabindex="-1">
                         <div class="row">
@@ -123,33 +123,35 @@
                                 <h3 wp-no-export>Left Sidebar</h3>
                                 <p wp-no-export>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
                             </div>
-                            <div class="content-area col-md-8 content-area" id="primary" data-pg-collapsed>
+                            <div class="content-area col-md-8 content-area" id="primary">
                                 <main class="site-main" id="main">
-                                    <article cms-post wp-template-part wp-template-part-slug="loop-templates/content-single" wp-include-template-part wp-include-template-part-slug="loop-templates/content-single" data-pg-collapsed>
-                                        <header class="entry-header" data-pg-collapsed>
-                                            <h1 cms-post-title>Post Title</h1>
-                                            <div class="entry-meta" data-pg-collapsed>
-                                                <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
+                                    <div wp-template-part wp-template-part-slug="loop-templates/content-single" wp-include-template-part wp-include-template-part-slug="loop-templates/content-single" wp-template-part-content data-pg-name="content-single template" data-pg-collapsed>
+                                        <article cms-post data-pg-collapsed>
+                                            <header class="entry-header" data-pg-collapsed>
+                                                <h1 cms-post-title>Post Title</h1>
+                                                <div class="entry-meta" data-pg-collapsed>
+                                                    <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
+                                                </div>
+                                            </header>
+                                            <div class="entry-content" data-pg-collapsed>
+                                                <p cms-post-content>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
+                                                <div wp-link-pages data-pg-name="Page Links for Paginated Posts"></div>
                                             </div>
-                                        </header>
-                                        <div class="entry-content" data-pg-collapsed>
-                                            <p cms-post-content>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
-                                            <div wp-link-pages data-pg-name="Page Links for Paginated Posts"></div>
-                                        </div>
-                                        <footer class="entry-footer">
-                                            <span class="tags-links" wp-the-tags="Tags: " wp-the-tags-sep=", " wp-the-tags-set="content" wp-if-has-tag>Tagged</span>
-                                            <span class="edit-link text-success" wp-edit-post-link="<b class=&quot;text-success&quot;>Edit Post</b>">Edit</span>
-                                        </footer>
-                                    </article>
-                                    <nav class="container navigation post-navigation pt-3 pb-3" wp-if-custom="! $next && ! $previous" data-pg-name="Post Navigation" data-pg-collapsed>
-                                        <h2 class="sr-only">Post navigation</h2>
-                                        <div class="row nav-links justify-content-between">
-                                            <span class="nav-previous"><a href="#" rel="prev" wp-prev-post-link="&laquo; %link">Previous Post</a></span>
-                                            <span class="nav-next"><a href="#" rel="next" wp-next-post-link="%link &raquo;">Next Post</a></span> 
-                                        </div>
-                                        <!-- .nav-links -->
-                                    </nav>
-                                    <div wp-comments-template="/comments.php" wp-if-comments-open wp-if-get-comments-number wp-if-is-single data-pg-name="Comments Template"></div>
+                                            <footer class="entry-footer" data-pg-collapsed>
+                                                <span class="tags-links" wp-the-tags="Tags: " wp-the-tags-sep=", " wp-the-tags-set="content" wp-if-has-tag>Tagged</span>
+                                                <span class="edit-link text-success" wp-edit-post-link="<b class=&quot;text-success&quot;>Edit Post</b>">Edit</span>
+                                            </footer>
+                                        </article>
+                                        <nav class="container navigation post-navigation pt-3 pb-3" wp-if-custom="! $next && ! $previous" data-pg-name="Post Navigation" data-pg-collapsed>
+                                            <h2 class="sr-only">Post navigation</h2>
+                                            <div class="row nav-links justify-content-between">
+                                                <span class="nav-previous"><a href="#" rel="prev" wp-prev-post-link="&laquo; %link">Previous Post</a></span>
+                                                <span class="nav-next"><a href="#" rel="next" wp-next-post-link="%link &raquo;">Next Post</a></span> 
+                                            </div>
+                                            <!-- .nav-links -->
+                                        </nav>
+                                        <div wp-comments-template="/comments.php" wp-if-comments-open wp-if-get-comments-number wp-if-is-single data-pg-name="Comments Template"></div>
+                                    </div>
                                 </main>                                 
                             </div>
                             <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_right_sidebar" role="complementary" id="right-sidebar" data-pg-collapsed>

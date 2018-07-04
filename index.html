@@ -125,27 +125,29 @@
                             </div>
                             <div class="col-md-8 content-area" id="primary">
                                 <main class="site-main" id="main">
-                                    <article cms-post wp-template-part wp-template-part-slug="loop-templates/content" wp-include-template-part wp-include-template-part-slug="loop-templates/content" class="mb-5">
-                                        <header class="entry-header">
-                                            <h2 cms-post-title cms-post-link="not_singular">Post Title</h2>
-                                            <div class="entry-meta">
-                                                <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
+                                    <div data-pg-name="content template" wp-template-part wp-template-part-slug="loop-templates/content" wp-template-part-content wp-include-template-part wp-include-template-part-slug="loop-templates/content" data-pg-collapsed>
+                                        <article cms-post class="mb-5" data-pg-collapsed>
+                                            <header class="entry-header">
+                                                <h2 cms-post-title cms-post-link="not_singular">Post Title</h2>
+                                                <div class="entry-meta">
+                                                    <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
+                                                </div>
+                                            </header>
+                                            <img src="assets/gfx/photo-01.jpg" cms-post-image="large" class="mb-4">
+                                            <div class="entry-content">
+                                                <p cms-post-excerpt>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
+                                                <a class="btn btn-secondary" wp-get-permalink wp-get-permalink-set="href" href="#">Read More</a>
                                             </div>
-                                        </header>
-                                        <img src="assets/gfx/photo-01.jpg" cms-post-image="large">
-                                        <div class="entry-content">
-                                            <p cms-post-excerpt>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
-                                            <a class="btn btn-secondary" wp-get-permalink wp-get-permalink-set="href" href="#">Read More</a>
-                                        </div>
-                                        <footer class="entry-footer"></footer>
-                                    </article>
-                                </main>
-                                <nav aria-label="Posts navigation">
-                                    <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Newer Posts" wp-posts-nav-link-next-label="Older Posts »">
-                                        <a href="http://starter-theme.loc/">« Newer Posts</a> — 
-                                        <a href="http://starter-theme.loc/page/3/">Older Posts »</a> 
+                                            <footer class="entry-footer"></footer>
+                                        </article>
+                                        <nav aria-label="Posts navigation" data-pg-collapsed>
+                                            <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Newer Posts" wp-posts-nav-link-next-label="Older Posts »">
+                                                <a href="http://starter-theme.loc/">« Newer Posts</a> — 
+                                                <a href="http://starter-theme.loc/page/3/">Older Posts »</a> 
+                                            </div>
+                                        </nav>
                                     </div>
-                                </nav>                                 
+                                </main>                                 
                             </div>
                             <div class="col-md-4 widget-area" wp-cz-control="show_right_sidebar" wp-cz-control-label="Show Right Sidebar" wp-cz-control-type="checkbox" wp-cz-control-section="theme_settings" wp-if-get-theme-mod="show_right_sidebar" wp-cz-control-description="Activate the Right Sidebar" role="complementary" id="right-sidebar">
                                 <aside wp-register-sidebar="Right Sidebar" wp-register-sidebar-id="right-sidebar" wp-register-sidebar-before="<aside id=&quot;%1$s&quot; class=&quot;widget %2$s&quot;>" wp-register-sidebar-after="</aside>" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-register-sidebar-description="Right Sidebar widget area" wp-dynamic-sidebar="right-sidebar" wp-dynamic-sidebar-set="element"></aside>
