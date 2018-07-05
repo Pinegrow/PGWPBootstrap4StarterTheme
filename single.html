@@ -145,8 +145,8 @@
                                         <nav class="container navigation post-navigation pt-3 pb-3" data-pg-name="Post Navigation">
                                             <h2 class="sr-only">Post navigation</h2>
                                             <div class="row nav-links justify-content-between">
-                                                <span class="nav-previous"><a href="#" rel="prev" wp-prev-post-link="%link" wp-prev-post-link-link="&laquo; %title">&#xAB; Previous Post</a></span>
-                                                <span class="nav-next"><a href="#" rel="next" wp-next-post-link="%link" wp-next-post-link-link="%title &raquo;">Next Post &raquo;</a></span> 
+                                                <span class="nav-previous" data-pg-collapsed><a href="#" rel="prev" wp-prev-post-link="%link" wp-prev-post-link-link="&laquo; %title">&#xAB; Previous Post</a></span>
+                                                <span class="nav-next" data-pg-collapsed><a href="#" rel="next" wp-next-post-link="%link" wp-next-post-link-link="%title &raquo;">Next Post &raquo;</a></span> 
                                             </div>
                                             <!-- .nav-links -->
                                         </nav>
@@ -201,8 +201,8 @@
         </div>
         <script src="assets/js/jquery-1.12.4.min.js" wp-no-export data-pg-name="Local jQuery"></script>
         <script wp-enqueue-script="jquery" data-pg-name="Enqueue WP jQuery"></script>
-        <script src="assets/js/carousel_init.js" wp-enqueue-script></script>
-        <script src="assets/js/popper.js" wp-enqueue-script></script>
-        <script src="bootstrap/js/bootstrap.min.js" wp-enqueue-script></script>
+        <script src="assets/js/carousel_init.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+        <script src="assets/js/popper.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+        <script src="bootstrap/js/bootstrap.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
     </body>
 </html>
