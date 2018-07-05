@@ -2,10 +2,6 @@
 // Pinegrow Starter Theme 2
 // THEME TWEAKS
 
-// Remove WordPress Emoji Things
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
@@ -54,9 +50,6 @@ require get_template_directory() . '/inc/editor.php';
     // Custom Comments file.
 
 require get_template_directory() . '/inc/custom-comments.php';
-
-    // END OF COMMENTS FORM TWEAKS
-
 
     // WIDGETS/SIDEBARS DISPLAY TWEAKS
     // Count number of widgets in a sidebar
@@ -131,9 +124,6 @@ if ( ! function_exists( 'st2_slbd_count_widgets' ) ) {
        $content = '<span class="onsale">'.__( 'SALE', 'st2' ).'</span>';
        return $content;
     }
-    // END OF WOOCOMMERCE TWEAKS
-
-
 
     // JETPACK TWEAKS
     // Jetpack setup function.
@@ -217,4 +207,158 @@ if ( ! function_exists ( 'st2_components_social_menu' ) ) {
 	// For existing projects needs to be added at the end of functions.php
 	
 	function pgwp_sanitize_placeholder($input) { return $input; }
-?>
+
+
+	// FUNCTIONALITY PLUGIN FEATURES
+
+	//* Remove 'Editor' from 'Appearance' Menu.
+	//* This stops users and hackers from being able to edit files from within WordPress.
+	define( 'DISALLOW_FILE_EDIT', true );
+
+
+	//* Add the ability to use shortcodes in widgets
+	add_filter( 'widget_text', 'do_shortcode' );
+
+
+	//* Prevent WordPress from compressing images
+	add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
+
+
+	//* Disable any and all mention of emoji's
+	//* Source code credit: http://ottopress.com/
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+
+	//* Remove items from the <head> section
+	remove_action( 'wp_head', 'wp_generator' );							//* Remove WP Version number
+	remove_action( 'wp_head', 'wlwmanifest_link' );						//* Remove wlwmanifest_link
+	remove_action( 'wp_head', 'rsd_link' );								//* Remove rsd_link
+	remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );			//* Remove shortlink
+	remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );	//* Remove previous/next post links
+
+
+	//* Limit the number of post revisions to keep
+	add_filter( 'wp_revisions_to_keep', 'st2_set_revision_max', 10, 2 );
+	function st2_set_revision_max( $num, $post ) {
+
+		$num = 5; //change 5 to match your preferred number of revisions to keep
+		return $num;
+
+	}
+
+	//* Login Screen: Set 'remember me' to be checked
+	add_action( 'init', 'st2_login_checked_remember_me' );
+	function st2_login_checked_remember_me() {
+
+	add_filter( 'login_footer', 'st2_rememberme_checked' )
+	;
+	}
+
+	function st2_rememberme_checked() {
+
+	echo "<script>document.getElementById('rememberme').checked = true;</script>";
+
+	}
+
+	//* Login Screen: Don't inform user which piece of credential was incorrect
+	add_filter ( 'login_errors', 'st2_failed_login' );
+	function st2_failed_login () {
+
+	return 'The login information you have entered is incorrect. Please try again.';
+
+	}
+
+	//* Modify the admin footer text
+	add_filter( 'admin_footer_text', 'st2_modify_footer_admin' );
+	function st2_modify_footer_admin () {
+
+	echo '<span id="footer-thankyou">Theme Development by <a href="http://pinegrow.com" target="_blank">Pinegrow Web Editor</a></span>';
+
+	}
+
+	//* Add theme info box into WordPress Dashboard
+	add_action('wp_dashboard_setup', 'st2_add_dashboard_widgets' );
+	function st2_add_dashboard_widgets() {
+
+	wp_add_dashboard_widget('wp_dashboard_widget', 'Theme Details', 'st2_theme_info');
+
+	}
+
+
+	function st2_theme_info() {
+
+	echo "<ul>
+	<li><strong>Developed By:</strong> Pinegrow Web Editor</li>
+	<li><strong>Website:</strong> <a href='http://pinegrow.com'>pinegrow.com</a></li>
+	<li><strong>Contact:</strong> <a href='mailto:support@pinegrow.com'>support@pinegrow.com</a></li>
+	</ul>";
+
+	}
+
+	//* Add Custom Post Types to Tags and Categories in WordPress
+	//* https://premium.wpmudev.org/blog/add-custom-post-types-to-tags-and-categories-in-wordpress/
+	//* If you’d like to add only specific post types to listings of tags and categories you can replace the line:
+	//* $post_types = get_post_types();
+	//* with
+	//* $post_types = array( 'post', 'your_custom_type' );
+	function st2_add_custom_types_to_tax( $query ) {
+	if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+
+	//* Get all your post types
+	$post_types = get_post_types();
+
+	$query->set( 'post_type', $post_types );
+	return $query;
+	}
+	}
+	add_filter( 'pre_get_posts', 'st2_add_custom_types_to_tax' );
+
+	//* Remove Jetpack Sharing Buttons to appear in Excerpts
+	//* https://wordpress.org/support/topic/sharing-icons-show-after-excerpt-and-content
+	function st2_jptweak_remove_exshare() {
+		remove_filter( 'the_excerpt', 'sharing_display',19 );
+	}
+	add_action( 'loop_end', 'st2_jptweak_remove_exshare' );
+
+
+	//* Jetpack Social menu
+	//* https://themeshaper.com/2016/02/12/jetpack-social-menu/
+	//* https://jetpack.com/support/social-menu/
+	function st2_jetpackme_social_menu() {
+		if ( ! function_exists( 'st2_jetpackme_social_menu' ) ) {
+			return;
+		} else {
+			jetpack_social_menu();
+		}
+	}
+
+	//* Change Jetpack Related Post Headline
+	//* https://jetpack.com/support/related-posts/customize-related-posts/#headline
+	function st2_jetpackme_related_posts_headline( $headline ) {
+	$headline = sprintf(
+	'<h3 class="jp-relatedposts-headline"><strong>%s</strong></h3>',
+	esc_html( 'Similar Stuff Going On' )//change your headline here
+	);
+	return $headline;
+	}
+	add_filter( 'jetpack_relatedposts_filter_headline', 'st2_jetpackme_related_posts_headline' );
+
+	//* Remove the Related Posts from your posts
+	//* https://jetpack.com/support/related-posts/customize-related-posts/
+	function st2_jetpackme_remove_rp() {
+		if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+			$jprp = Jetpack_RelatedPosts::init();
+			$callback = array( $jprp, 'filter_add_target_to_dom' );
+			remove_filter( 'the_content', $callback, 40 );
+		}
+	}
+	add_filter( 'wp', 'st2_jetpackme_remove_rp', 20 );
+
+
+	?>
