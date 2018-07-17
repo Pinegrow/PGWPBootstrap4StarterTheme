@@ -1,15 +1,13 @@
 @mixin alert-variant($background, $border, $color) {
-    color: $color;
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border;
 
-    @include gradient-bg($background);
+  hr {
+    border-top-color: darken($border, 5%);
+  }
 
-    border-color: $border;
-
-    hr {
-        border-top-color: darken($border, 5%);
-    }
-
-    .alert-link {
-        color: darken($color, 10%);
-    }
+  .alert-link {
+    color: darken($color, 10%);
+  }
 }

@@ -2,11 +2,11 @@
  * WooCommerce CSS Variables
  */
 $woocommerce: #a46497;
-$bg-onsale: #643AB9;
 $green: #7ad03a;
 $red: #a00;
 $orange: #ffba00;
 $blue: #1e85be;
+$bg-onsale: $orange;
 $primary: #a46497;                                    // Primary color for buttons (alt)
 $primarytext: desaturate(lighten($primary, 50%), 18%);    // Text on primary color bg
 $secondary: desaturate(lighten($primary, 40%), 21%);    // Secondary buttons

@@ -277,14 +277,14 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'woocommerce' );
-    wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/bootstrap_theme/woocommerce.css', false, null, 'all');
-
     wp_deregister_style( 'bootstrap' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
 
     wp_deregister_style( 'theme' );
-    wp_enqueue_style( 'theme', get_template_directory_uri() . '/assets/css/theme.css', false, null, 'all');
+    wp_enqueue_style( 'theme', get_template_directory_uri() . '/css/theme.css', false, null, 'all');
+
+    wp_deregister_style( 'woocommerce' );
+    wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
