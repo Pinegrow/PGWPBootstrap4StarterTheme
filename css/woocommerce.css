@@ -94,16 +94,16 @@
  */
 @font-face {
     font-family: 'star';
-    src: url("woocommerce/fonts/star.eot");
-    src: url("woocommerce/fonts/star.eot?#iefix") format("embedded-opentype"), url("woocommerce/fonts/star.woff") format("woff"), url("woocommerce/fonts/star.ttf") format("truetype"), url("woocommerce/fonts/star.svg#star") format("svg");
+    src: url("../bootstrap_theme/woocommerce/fonts/star.eot");
+    src: url("../bootstrap_theme/woocommerce/fonts/star.eot?#iefix") format("embedded-opentype"), url("../bootstrap_theme/woocommerce/fonts/star.woff") format("woff"), url("../bootstrap_theme/woocommerce/fonts/star.ttf") format("truetype"), url("../bootstrap_theme/woocommerce/fonts/star.svg#star") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'WooCommerce';
-    src: url("woocommerce//fonts/WooCommerce.eot");
-    src: url("woocommerce//fonts/WooCommerce.eot?#iefix") format("embedded-opentype"), url("woocommerce//fonts/WooCommerce.woff") format("woff"), url("woocommerce//fonts/WooCommerce.ttf") format("truetype"), url("woocommerce//fonts/WooCommerce.svg#WooCommerce") format("svg");
+    src: url("../bootstrap_theme/woocommerce//fonts/WooCommerce.eot");
+    src: url("../bootstrap_theme/woocommerce//fonts/WooCommerce.eot?#iefix") format("embedded-opentype"), url("../bootstrap_theme/woocommerce//fonts/WooCommerce.woff") format("woff"), url("../bootstrap_theme/woocommerce//fonts/WooCommerce.ttf") format("truetype"), url("../bootstrap_theme/woocommerce//fonts/WooCommerce.svg#WooCommerce") format("svg");
     font-weight: normal;
     font-style: normal;
 }
