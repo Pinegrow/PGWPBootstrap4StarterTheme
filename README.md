@@ -13,7 +13,7 @@ The Pinegrow WordPress Starter Theme is deeply inspired by the [UnderStrap theme
 
 # Features
 
-- SASS: Utilizes the SASS sources from all assets as well as own SASS files. Makes it easy to replace colors, fonts, stylings etc. directly from Pinegrow visual CSS editor.
+- SASS: Utilizes the SASS sources from all assets as well as own SASS files. Makes it easy to replace colors, fonts, stylings etc. directly from Pinegrow visual CSS editor. (Learn more about how-to easily [Customize Bootstrap 4](https://pinegrow.com/docs/bootstrap-visual-editor/customize-bootstrap-4-themes/) with Pinegrow.)
 - Options Panel: Let you add custom code right from your WordPress customization panel. You can also control the slider settings.
 - Jetpack ready: Comes with basic theme support for the famous plugin bundle by Automattic. No extra styles or settings but you can use both in combination.
 - WooCommerce support: The WordPress Starter Theme supports WooCommerce plugin. WooCommerce is the #1 e-commerce system for WordPress (more than 1.000.000 active installs).
@@ -69,7 +69,7 @@ Read more about [WordPress common templates](https://developer.wordpress.org/the
 
 # How-to use the WordPress Starter Theme 2
 
-The process is fairly simple: Just pull the project on your computer (using a Git client or by downloading the zip file) and start tweaking the files (layout, css, more wordpress actions ...) as per your needs using Pinegrow PRO/WP. Export your theme!
+The process is fairly simple: Just pull the project on your computer (using a Git client or by downloading the zip file) and start tweaking the files (layout, css, more wordpress actions ...) as per your needs & liking using Pinegrow PRO/WP and ... export your theme!
 
 More details & pro tips coming soon.
 

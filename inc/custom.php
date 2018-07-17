@@ -294,6 +294,7 @@ if ( ! function_exists ( 'st2_components_social_menu' ) ) {
 	function st2_theme_info() {
 
 	echo "<ul>
+	<li><strong>Theme:</strong> Starter Theme 2</li>
 	<li><strong>Developed By:</strong> Pinegrow Web Editor</li>
 	<li><strong>Website:</strong> <a href='http://pinegrow.com'>pinegrow.com</a></li>
 	<li><strong>Contact:</strong> <a href='mailto:support@pinegrow.com'>support@pinegrow.com</a></li>
