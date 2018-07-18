@@ -1,6 +1,19 @@
 <?php
-// Pinegrow Starter Theme 2
-// THEME TWEAKS
+// Pinegrow Starter Theme 2 Theme Tweaks
+
+// To personnalize your theme and ease further maintenance, always prefix your function names with the theme domain (= theme slug in your Pinegrow theme settings, for example st2_FunctionName). 
+
+// Theme localization is done by replacing the (current) 'st2' string with your own theme slug. 
+// Note: It is done automatically in functions.php but not for the PHP file provided with the ST2.
+
+// Concerned files:
+// - /woocommerce/ all the templates
+// - /inc/custom-comments.php
+// - /inc/custom-header.php
+// - /inc/editor.php
+// - comments.php
+// - searchform.php
+
 
 // Set the content width based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) ) {

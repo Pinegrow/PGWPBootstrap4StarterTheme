@@ -300,7 +300,7 @@ require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
 
     /* Pinegrow generated Include Resources End */
 
-/* Don't add custom your custom snippets here, but in inc/custom.php */
+/* Don't add custom your custom snippets here, but use inc/custom.php */
 /* ST2 Include Resources Begin */
 require_once "inc/custom.php";
 

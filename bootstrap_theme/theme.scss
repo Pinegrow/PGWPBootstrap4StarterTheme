@@ -1,34 +1,21 @@
-/* Custom CSS rules come here */
-/* Edit bootstrap_theme>theme.scss to add/modify rules */
-
-.jumbotron {
-    background-position: center;
-    background-attachment: scroll;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+// Your Custom Theme & WordPress related CSS rules should come here //
+// Edit bootstrap_theme>custom.scss to add/modify custom rules which are "bootstrap related" //
 
 img.wp-post-image,
 article img,
 figure,
 img,
 #secondary img {
-    /* margin-bottom: 10px */
+margin-bottom: 10px;
+}
+
+.wp-caption-text {
+margin-bottom: 10px;
 }
 
 .widget-area aside {
     padding-bottom: 10px;
     padding-top: 10px;
-}
-
-pre {
-    overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
-    white-space: pre-wrap; /* css-3 */
-    white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
-    white-space: -pre-wrap; /* Opera 4-6 */
-    white-space: -o-pre-wrap; /* Opera 7 */
-    /* width: 99%; */
-    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 .size-auto,
@@ -40,14 +27,7 @@ pre {
     height: auto;
 }
 
-h1.navbar-brand > a {
-    text-decoration: none;
-}
-
 #page {
     word-wrap: break-word;
 }
 
-.btn {
-    white-space: normal;
-}
