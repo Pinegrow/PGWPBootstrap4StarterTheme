@@ -14,7 +14,7 @@
 // keep a max width in case it is just the form and nothing else
 // we do not want a form spanning whole page
 .wpcf7 {
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto !important;
 
     // all inputs except radios and checkboxes inherit from form-control

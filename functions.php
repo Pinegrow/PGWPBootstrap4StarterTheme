@@ -189,7 +189,7 @@ function st2_customize_register( $wp_customize ) {
 
     $wp_customize->add_control( 'show_jumbotron', array(
         'label' => __( 'Show Jumbotron', 'st2' ),
-        'description' => __( 'Activate the Jumbotron', 'st2' ),
+        'description' => __( 'Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.', 'st2' ),
         'type' => 'checkbox',
         'section' => 'header_settings'
     ));
@@ -214,6 +214,28 @@ function st2_customize_register( $wp_customize ) {
         'label' => __( 'Jumbotron Background image', 'st2' ),
         'type' => 'media',
         'mime_type' => 'image',
+        'section' => 'header_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'jumbotron_heading_color', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_heading_color', array(
+        'label' => __( 'Jumbotron Heading Color', 'st2' ),
+        'type' => 'color',
+        'section' => 'header_settings'
+    ) ) );
+
+    $wp_customize->add_setting( 'jumbotron_text_color', array(
+        'type' => 'theme_mod',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'jumbotron_text_color', array(
+        'label' => __( 'Jumbotron Paragraph Color', 'st2' ),
+        'type' => 'color',
         'section' => 'header_settings'
     ) ) );
 
