@@ -54,6 +54,16 @@ if ( ! function_exists( 'st2_change_logo_class' ) ) {
 	}
 }
 
+// Add the filter and function, returning the widget title only if the first character is not "!"
+// Very useful to deal with Custom HTML widgets and immediately visualize each widget role and content.
+
+add_filter( 'widget_title', 'st2_remove_widget_title' );
+function st2_remove_widget_title( $widget_title ) {
+	if ( substr ( $widget_title, 0, 1 ) == '!' )
+		return;
+	else 
+		return ( $widget_title );
+}
 
     // EDITOR TWEAKS
     // Load Editor functions.
@@ -123,7 +133,7 @@ if ( ! function_exists( 'st2_slbd_count_widgets' ) ) {
     	}
     }
 
-    // Remove each style one by one
+    // Remove default woocommerce-general styles (we use the ones from the ST2)
     add_filter( 'woocommerce_enqueue_styles', 'st2_woocommerce_styles' );
     function st2_woocommerce_styles( $enqueue_styles ) {
     	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
@@ -137,7 +147,33 @@ if ( ! function_exists( 'st2_slbd_count_widgets' ) ) {
     function st2_change_sale_content($content, $post, $product){
        $content = '<span class="onsale">'.__( 'SALE', 'st2' ).'</span>';
        return $content;
-    }
+	}
+	
+	//* Optimize WooCommerce to Load Scripts and CSS Conditionally only if required.
+	//* Enqueue scripts and styles
+	add_action( 'wp_enqueue_scripts', 'st2_disable_woocommerce_loading_css_js' );
+ 
+	function st2_disable_woocommerce_loading_css_js() {
+	 
+		// Check if WooCommerce plugin is active
+		if( function_exists( 'is_woocommerce' ) ){
+	 
+			// Check if it's any of WooCommerce page
+			if(! is_woocommerce() && ! is_cart() && ! is_checkout() ) { 		
+				
+				## Dequeue WooCommerce styles
+				wp_dequeue_style('woocommerce');
+				wp_dequeue_style('woocommerce-layout'); 
+				wp_dequeue_style('woocommerce-smallscreen'); 	
+	 
+				## Dequeue WooCommerce scripts
+				wp_dequeue_script('wc-cart-fragments');
+				wp_dequeue_script('woocommerce'); 
+				wp_dequeue_script('wc-add-to-cart'); 
+			
+			}
+		}	
+	}
 
     // JETPACK TWEAKS
     // Jetpack setup function.
@@ -374,31 +410,5 @@ if ( ! function_exists ( 'st2_components_social_menu' ) ) {
 		}
 	}
 	add_filter( 'wp', 'st2_jetpackme_remove_rp', 20 );
-
-	//* Optimize WooCommerce to Load Scripts and CSS Conditionally only if required.
-	//* Enqueue scripts and styles
-add_action( 'wp_enqueue_scripts', 'st2_disable_woocommerce_loading_css_js' );
- 
-function st2_disable_woocommerce_loading_css_js() {
- 
-	// Check if WooCommerce plugin is active
-	if( function_exists( 'is_woocommerce' ) ){
- 
-		// Check if it's any of WooCommerce page
-		if(! is_woocommerce() && ! is_cart() && ! is_checkout() ) { 		
-			
-			## Dequeue WooCommerce styles
-			wp_dequeue_style('woocommerce');
-			wp_dequeue_style('woocommerce-layout'); 
-			wp_dequeue_style('woocommerce-smallscreen'); 	
- 
-			## Dequeue WooCommerce scripts
-			wp_dequeue_script('wc-cart-fragments');
-			wp_dequeue_script('woocommerce'); 
-			wp_dequeue_script('wc-add-to-cart'); 
-		
-		}
-	}	
-}
 
 	?>

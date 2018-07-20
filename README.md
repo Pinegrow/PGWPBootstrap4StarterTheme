@@ -71,7 +71,7 @@ Read more about [WordPress common templates](https://developer.wordpress.org/the
 
 The process is fairly simple: Just pull the project on your computer (using a Git client or by downloading the zip file) and start tweaking the files (layout, css, more wordpress actions ...) as per your needs & liking using Pinegrow PRO/WP and ... export your theme!
 
-More details & pro tips coming soon.
+Read the documentation [HERE](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/wiki) 
 
 
 # Recommended Plugins
