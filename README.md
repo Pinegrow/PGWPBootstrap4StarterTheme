@@ -2,8 +2,8 @@
 
 ## About
 
-The WordPress Starter Theme 2 is a foundation/framework for quickly developing your own custom themes. 
-The Starter theme 2 is based on Bootstrap 4.x, with a complete set of WordPress common templates and support for Jetpack & WooCommerce.
+The WordPress Starter Theme 2 (ST2) is a foundation/framework for quickly developing your own custom themes. 
+The WordPress Starter Theme 2 is based on Bootstrap 4.x, with a complete set of WordPress common templates and support for Jetpack & WooCommerce.
 
 - The WordPress Starter Theme 2 is **not an update of the previous version** (1.2) but a totally new version.
 - The WordPress Starter Theme requires [Pinegrow PRO with WordPress builder](https://pinegrow.com/), it will not work without it.
