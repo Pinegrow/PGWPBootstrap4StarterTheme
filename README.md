@@ -89,3 +89,8 @@ http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 - _s (aka underscores): [https://underscores.me/](https://underscores.me//)
 - jQuery: https://jquery.org | (Code licensed under MIT)
 
+# How-to contribute to the code and provide fixes and/or features?
+
+See our [Contribution Guidelines](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/CONTRIBUTING.md), [Code of conduct](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/CODE-OF-CONDUCT.md) and [Issue Template](https://github.com/Pinegrow/PGWPBootstrap4StarterTheme/blob/master/ISSUE_TEMPLATE.md).
+
+
