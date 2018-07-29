@@ -1,4 +1,4 @@
-# Pinegrow WordPress Starter Theme
+# Pinegrow WordPress Starter Theme 2
 
 ## About
 
