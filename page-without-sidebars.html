@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" wp-site wp-site-master-page="index.html" wp-page-template="ST2 Page Without Sidebars">
-    <head>
+    <head data-pg-collapsed>
         <meta charset="utf-8" wp-no-export>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,14 +18,14 @@
         <link href="css/theme.css" rel="stylesheet" type="text/css">
         <link href="css/woocommerce.css" rel="stylesheet" type="text/css">
     </head>
-    <body wp-body-class="ezrezr">
+    <body>
         <div class="hfeed site" id="page">
             <header data-pg-collapsed>
-                <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar" data-pg-collapsed>
+                <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
                     <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
-                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg" data-pg-collapsed> 
+                    <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
-                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true" data-pg-collapsed>
+                            <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true">
                                 <h1 class="navbar-brand mb-0" wp-if-is-front-page wp-if-is-home><a rel="home" href="#" cms-site-name>ST2</a></h1>
                                 <a rel="home" class="navbar-brand" href="#" cms-site-name wp-else-if wp-hide>ST2</a>
                             </div>
@@ -57,11 +57,11 @@
                         </div>                         
                     </nav>
                 </div>
-                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron" data-pg-collapsed>
-                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings" data-pg-collapsed>
+                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin." data-pg-collapsed>
+                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings">
                         <div class="container">
-                            <h1 class="display-3">Starter Theme <b>2</b></h1>
-                            <p class="lead">Powered by Bootstrap 4 and SASS.</p>
+                            <h1 class="display-3" data-pg-collapsed cms-editable="jumbotron_heading_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Heading Color" cms-editable-style-important cms-editable-section="header_settings">Starter Theme <b>2</b></h1>
+                            <p class="lead" cms-editable="jumbotron_text_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Paragraph Color" cms-editable-section="header_settings">Powered by Bootstrap 4 and SASS.</p>
                         </div>
                     </div>
                 </div>
