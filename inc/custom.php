@@ -322,7 +322,8 @@ add_filter('widget_text', 'do_shortcode');
 
 
 //* Prevent WordPress from compressing images
-add_filter('jpeg_quality', create_function('', 'return 100;'));
+add_filter('jpeg_quality', function($arg){return 100;});
+
 
 //* Modify the admin footer text
 add_filter('admin_footer_text', 'st2_modify_footer_admin');
