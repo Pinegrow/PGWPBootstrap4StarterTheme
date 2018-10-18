@@ -51,8 +51,8 @@
     margin-left: 1.5em;
 }
 
-.aligncenter {
-    margin: 0px auto;
+.aligncenter { 
+    @extend .mx-auto;
 }
 
 // Post design
@@ -140,3 +140,5 @@ a.skip-link {
         color: $navbar-dark-active-color;
     }
 }
+
+.navbar h1 { font-weight: $font-weight-normal; }
