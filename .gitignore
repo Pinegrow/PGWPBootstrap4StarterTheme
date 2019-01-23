@@ -4,3 +4,5 @@ _pgexport
 _pgbackup
 sample-assets.txt
 .DS_Store
+/._index.html
+/._pinegrow.json

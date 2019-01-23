@@ -51,7 +51,7 @@
     margin-left: 1.5em;
 }
 
-.aligncenter { 
+.aligncenter {
     @extend .mx-auto;
 }
 
@@ -141,4 +141,6 @@ a.skip-link {
     }
 }
 
-.navbar h1 { font-weight: $font-weight-normal; }
+.navbar h1 {
+    font-weight: $font-weight-normal;
+}

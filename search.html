@@ -19,7 +19,7 @@
     </head>
     <body>
         <div class="hfeed site" id="page">
-            <header data-pg-collapsed>
+            <header>
                 <div itemscope="" itemtype="http://schema.org/WebSite" id="wrapper-navbar">
                     <a class="skip-link sr-only sr-only-focusable" href="#content">Skip to content</a>
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
@@ -55,15 +55,15 @@
                         </div>                         
                     </nav>
                 </div>
-                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin." data-pg-collapsed>
+                <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.">
                     <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings">
                         <div class="container">
-                            <h1 class="display-3" data-pg-collapsed cms-editable="jumbotron_heading_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Heading Color" cms-editable-style-important cms-editable-section="header_settings">Starter Theme <b>2</b></h1>
+                            <h1 class="display-3" cms-editable="jumbotron_heading_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Heading Color" cms-editable-style-important cms-editable-section="header_settings">Starter Theme <b>2</b></h1>
                             <p class="lead" cms-editable="jumbotron_text_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Paragraph Color" cms-editable-section="header_settings">Powered by Bootstrap 4 and SASS.</p>
                         </div>
                     </div>
                 </div>
-                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero" data-pg-collapsed data-pg-name="Hero Carousel">
+                <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="hero" data-pg-name="Hero Carousel">
                     <div id="HeroCarouselControls" class="carousel slide" data-ride="carousel" data-interval="8000" data-pause="hover" wp-hide>
                         <div class="carousel-inner">
                             <div class="widget_text carousel-item" wp-register-sidebar="Hero Slider" wp-register-sidebar-id="hero" wp-register-sidebar-description="Hero slider area. Place two or more widgets here and they will slide!" wp-register-sidebar-before="<div class=&quot;carousel-item&quot;>" wp-register-sidebar-after="</div>" wp-dynamic-sidebar="hero" wp-register-sidebar-before-title=" " wp-register-sidebar-after-title=" " wp-dynamic-sidebar-set="element" data-pg-name="Carousel Slide">
@@ -93,7 +93,7 @@
                 </div>
                 <div class="wrapper container-fluid" id="wrapper-hero" wp-if-is-active-sidebar="herocanvas" wp-register-sidebar="Hero Canvas" wp-register-sidebar-id="herocanvas" wp-register-sidebar-description="Full size canvas hero area for Bootstrap and other custom HTML markup" wp-register-sidebar-before="''" wp-register-sidebar-after="''" wp-register-sidebar-before-title="''" wp-register-sidebar-after-title="''" wp-dynamic-sidebar="herocanvas" data-pg-name="Hero Canvas">
 </div>
-                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero" data-pg-collapsed data-pg-name="Full Top Widgets">
+                <div class="wrapper" id="wrapper-static-hero" wp-if-is-active-sidebar="statichero" data-pg-name="Full Top Widgets">
                     <div id="wrapper-static-content" tabindex="-1" class="container">
                         <div class="row">
                             <div id="custom_html-6" class="widget_text static-hero-widget widget_custom_html widget-count-2 col-md-6" wp-register-sidebar="Top Full" wp-register-sidebar-id="statichero" wp-register-sidebar-description="Full top widget with dynamic grid" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;static-hero-widget %2$s '. st2_slbd_count_widgets( 'statichero' ) .'&quot;>'" wp-register-sidebar-after="</div><!-- .static-hero-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="statichero" wp-dynamic-sidebar-set="element">
@@ -112,51 +112,51 @@
                     </div>
                 </div>
             </header>
-            <div wp-site-content data-pg-collapsed>
+            <div wp-site-content>
                 <div class="wrapper" id="search-wrapper">
                     <div class="container" id="content" tabindex="-1">
                         <div class="row">
-                            <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_left_sidebar" role="complementary" id="left-sidebar" wp-hide data-pg-collapsed>
+                            <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_left_sidebar" role="complementary" id="left-sidebar" wp-hide>
                                 <aside wp-dynamic-sidebar="left-sidebar" wp-dynamic-sidebar-set="element"></aside>
                                 <h3 wp-no-export>Left Sidebar</h3>
                                 <p wp-no-export>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
                             </div>
                             <div class="content-area col-md-8 content-area" id="primary">
-                                <main class="site-main" id="main" data-pg-collapsed>
-                                    <h1 data-pg-collapsed>Search Results for: <span wp-the-search-query wp-the-search-query-set="content">QUERY</span></h1>
+                                <main class="site-main" id="main">
+                                    <h1>Search Results for: <span wp-the-search-query wp-the-search-query-set="content">QUERY</span></h1>
                                     <p wp-call-function="$wp_query->found_posts.' results found.';" wp-call-function-echo="true" wp-call-function-set="content">125 results found</p>
                                     <article class="mb-5" wp-post-class wp-the-id wp-loop wp-loop-empty-text="Sorry, but nothing matched your search terms. Please try again with some different keywords." wp-loop-empty-text-wrapper="<p class=&quot;lead text-muted&quot;>$1</p>">
                                         <header class="entry-header">
                                             <h2 cms-post-title cms-post-link="not_singular">Post Title</h2>
-                                            <div class="entry-meta" data-pg-collapsed>
+                                            <div class="entry-meta">
                                                 <p>Posted on <span wp-the-modified-date wp-the-modified-date-set="content">March 18, 2018</span> by <span><a href="" wp-the-author wp-the-author-set="content" wp-href="author_posts">youremail@gmail.com</a></span></p>
                                             </div>
                                         </header>
-                                        <img src="assets/gfx/photo-01.jpg" cms-post-image="large">
+                                        <img src="assets/gfx/full_size/pg_mountain_lake.jpg" cms-post-image="large">
                                         <div class="entry-content">
                                             <p cms-post-excerpt>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar faucibus neque, nec rhoncus nunc ultrices sit amet. Curabitur ac sagittis neque, vel egestas est. Aenean elementum, erat at aliquet hendrerit, elit nisl posuere tortor, id suscipit diam dui sed nisi. Morbi sollicitudin massa vel tortor consequat, eget semper nisl fringilla. Maecenas at hendrerit odio. Sed in mi eu quam suscipit bibendum quis at orci. Pellentesque fermentum nisl purus, et iaculis lectus pharetra sit amet.</p>
                                             <a class="btn btn-secondary" wp-get-permalink wp-get-permalink-set="href" href="#">Read More</a>
                                         </div>
                                         <footer class="entry-footer"></footer>
                                     </article>
-                                    <form method="get" id="searchform" action="//localhost:3000/" role="search" wp-get-search-form wp-if-have-posts="!" wp-hide data-pg-name="Search Form if No Results" data-pg-collapsed>
+                                    <form method="get" id="searchform" action="//localhost:3000/" role="search" wp-get-search-form wp-if-have-posts="!" wp-hide data-pg-name="Search Form if No Results">
                                         <div class="input-group">
                                             <input class="field form-control" id="s" name="s" placeholder="Search …" value="" type="text">
                                             <span class="input-group-append"> <input class="submit btn btn-primary" id="searchsubmit" name="submit" value="Search" type="submit"> </span>
                                         </div>
                                     </form>
                                 </main>
-                                <nav aria-label="Posts navigation" data-pg-collapsed>
-                                    <div wp-call-function="the_posts_pagination( array( 'mid_size' => 2 ) );" data-pg-name="Post Pagination" data-pg-collapsed>
+                                <nav aria-label="Posts navigation">
+                                    <div wp-call-function="the_posts_pagination( array( 'mid_size' => 2 ) );" data-pg-name="Post Pagination">
                                         <p>Previous 1 2 3</p>
                                     </div>
-                                    <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Previous Search Results" wp-posts-nav-link-next-label="Next Search Results »" data-pg-collapsed wp-no-export wp-hide>
+                                    <div id="posts-navigation" wp-posts-nav-link wp-posts-nav-link-prev-label="« Previous Search Results" wp-posts-nav-link-next-label="Next Search Results »" wp-no-export wp-hide>
                                         <a href="#">« Previous Search Results</a> — 
                                         <a href="#">Next Search Results »</a> 
                                     </div>
                                 </nav>                                 
                             </div>
-                            <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_right_sidebar" role="complementary" id="right-sidebar" data-pg-collapsed>
+                            <div class="col-md-4 widget-area" wp-if-get-theme-mod="show_right_sidebar" role="complementary" id="right-sidebar">
                                 <aside wp-dynamic-sidebar="right-sidebar" wp-dynamic-sidebar-set="element"></aside>
                                 <h3 wp-no-export>Right Sidebar</h3>
                                 <p wp-no-export>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
@@ -165,8 +165,8 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-collapsed data-pg-name="Bottom Full Widgets">
-                <div id="footer-full-content" tabindex="-1" class="container" data-pg-collapsed>
+            <div class="wrapper" id="wrapper-footer-full" wp-if-is-active-sidebar="footerfull" data-pg-name="Bottom Full Widgets">
+                <div id="footer-full-content" tabindex="-1" class="container">
                     <div class="row">
                         <div id="custom_html-2" class="widget_text footer-widget widget_custom_html widget-count-3 col-md-4" wp-register-sidebar="Bottom Full" wp-register-sidebar-id="footerfull" wp-register-sidebar-description="Full bottom widget with dynamic grid" wp-register-sidebar-after="</div><!-- .footer-widget -->" wp-register-sidebar-before-title="<h3 class=&quot;widget-title&quot;>" wp-dynamic-sidebar="footerfull" wp-dynamic-sidebar-set="element" wp-register-sidebar-before="'<div id=&quot;%1$s&quot; class=&quot;footer-widget %2$s '. st2_slbd_count_widgets( 'footerfull' ) .'&quot;>'">
                             <h3 class="widget-title">Sample Footer Widget</h3>
@@ -183,7 +183,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapper" id="wrapper-footer" data-pg-collapsed data-pg-name="Footer">
+            <div class="wrapper" id="wrapper-footer" data-pg-name="Footer">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
