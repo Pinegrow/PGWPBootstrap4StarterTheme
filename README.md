@@ -49,7 +49,7 @@ The Pinegrow WordPress Starter Theme is deeply inspired by the [UnderStrap theme
 - Basic Woocommerce store
 - Jetpack ready
 - Fully cutomizable (layout, CSS  with SASS version included, features…)
-- 100% Bootstrap (Currently v4.2.1)
+- 100% Bootstrap (Currently v4.1.3)
 - Translation ready / I18n
 
 ## WordPress common templates
