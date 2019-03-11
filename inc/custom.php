@@ -33,6 +33,9 @@ add_theme_support('custom-background', apply_filters('st2_custom_background_args
 //* Set up the WordPress Theme logo feature.
 add_theme_support('custom-logo');
 
+// Add support for responsive embedded content.
+add_theme_support( 'responsive-embeds' );
+
 //* Filter custom logo with correct classes.
 add_filter('get_custom_logo', 'st2_change_logo_class');
 
