@@ -13,7 +13,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @author  WooThemes
  * @package WooCommerce/Templates
- * @version 2.6.0
+ * @version 3.6.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -27,9 +27,10 @@ do_action( 'woocommerce_before_account_navigation' );
 	<div class="list-group">
 			<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 				<a href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"
-				   class="list-group-item list-group-item-action"><?php echo esc_html( $label ); ?></a>
+					class="list-group-item list-group-item-action"><?php echo esc_html( $label ); ?></a>
 			<?php endforeach; ?>
 	</div>
 </nav>
 
-<?php do_action( 'woocommerce_after_account_navigation' ); ?>
+<?php
+do_action( 'woocommerce_after_account_navigation' );

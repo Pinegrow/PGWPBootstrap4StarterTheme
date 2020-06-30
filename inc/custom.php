@@ -14,11 +14,22 @@
 //* - /inc/editor.php
 //* - comments.php
 //* - searchform.php
+//* - /inc/bootstrap/wp_bootstrap4_navwalker.php (only in your exported theme folder)
+
+
+//* Disable Editor Full Screen
+//* https://jeanbaptisteaudras.com/2020/03/desactiver-le-mode-fullscreen-de-gutenberg-present-par-defaut-dans-wordpress-5-4/
+
+function st2_disable_editor_fullscreen_by_default() {
+	$script = "jQuery( window ).load(function() { const isFullscreenMode = wp.data.select( 'core/edit-post' ).isFeatureActive( 'fullscreenMode' ); if ( isFullscreenMode ) { wp.data.dispatch( 'core/edit-post' ).toggleFeature( 'fullscreenMode' ); } });";
+	wp_add_inline_script( 'wp-blocks', $script );
+}
+add_action( 'enqueue_block_editor_assets', 'st2_disable_editor_fullscreen_by_default' );
 
 
 //* Set the content width based on the theme's design and stylesheet.
 if (!isset($content_width)) {
-	$content_width = 640; /* pixels */
+	$content_width = 730; /* 640 pixels */
 }
 
 //* Customize Selective Refresh Widget
@@ -337,21 +348,13 @@ function st2_modify_footer_admin()
 
 }
 
-//* Add theme info box into WordPress Dashboard
-add_action('wp_dashboard_setup', 'st2_add_dashboard_widgets');
-function st2_add_dashboard_widgets()
-{
-
-	wp_add_dashboard_widget('wp_dashboard_widget', 'Theme Details', 'st2_theme_info');
-
-}
 
 
 function st2_theme_info()
 {
 
 	echo "<ul>
-	<li><strong>Theme:</strong> Starter Theme 2</li>
+	<li><strong>Theme:</strong> Starter Theme 2 Reboot Edition</li>
 	<li><strong>Developed By:</strong> Pinegrow Web Editor</li>
 	<li><strong>Website:</strong> <a href='http://pinegrow.com'>pinegrow.com</a></li>
 	<li><strong>Contact:</strong> <a href='mailto:support@pinegrow.com'>support@pinegrow.com</a></li>
@@ -395,24 +398,6 @@ function st2_rips_unlink_tempfix($data)
 	return $data;
 }
 
-//* Disable any and all mention of emoji's
-//* Source code credit: http://ottopress.com/
-remove_action('wp_head', 'print_emoji_detection_script', 7);
-remove_action('admin_print_scripts', 'print_emoji_detection_script');
-remove_action('wp_print_styles', 'print_emoji_styles');
-remove_action('admin_print_styles', 'print_emoji_styles');
-remove_filter('the_content_feed', 'wp_staticize_emoji');
-remove_filter('comment_text_rss', 'wp_staticize_emoji');
-remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
-
-
-//* Remove items from the <head> section
-remove_action('wp_head', 'wp_generator');                            //* Remove WP Version number
-remove_action('wp_head', 'wlwmanifest_link');                        //* Remove wlwmanifest_link
-remove_action('wp_head', 'rsd_link');                                //* Remove rsd_link
-remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);            //* Remove shortlink
-remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);    //* Remove previous/next post links
-
 
 //* Limit the number of post revisions to keep
 add_filter('wp_revisions_to_keep', 'st2_set_revision_max', 10, 2);
@@ -447,6 +432,22 @@ function st2_failed_login()
 	return 'The login information you have entered is incorrect. Please try again.';
 
 }
+
+//* Shortcodes Tweaks
+
+add_filter( 'widget_text', 'do_shortcode' );
+
+
+//* Quick Trick but does the job > Add Bootstrap4 Form Styling To WooCommerce Checkout Fields
+//* https://millionclues.com/wordpress-tips/bootstrap4-form-styling-woocommerce-fields/
+
+function st2_wc_bootstrap_form_field_args ($args, $key, $value) { 
+  
+	$args['input_class'][] = 'form-control'; 
+	return $args; 
+  }
+  add_filter('woocommerce_form_field_args','st2_wc_bootstrap_form_field_args', 10, 3);
+
 
 
 ?>

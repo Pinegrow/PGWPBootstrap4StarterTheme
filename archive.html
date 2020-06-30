@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" wp-site wp-site-theme-name="st2" wp-site-theme-slug="st2" wp-site-preview-url="http://localhost:3000/" wp-site-themes-folder="${st2}" wp-site-master-page="index.html">
+<!DOCTYPE html>
+<html lang="en" wp-template wp-template-master="index.html" wp-template-export-as="archive.php">
     <head>
         <meta charset="utf-8" wp-no-export>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -25,7 +25,7 @@
                     <nav class="navbar bg-primary navbar-dark navbar-expand-lg"> 
                         <div class="container">
                             <div data-pg-name="Brand Without Custom Logo" wp-if-custom="has_custom_logo()" wp-if-custom-not="true">
-                                <a rel="home" class="navbar-brand" href="#" cms-site-name>ST2</a>
+                                <a rel="home" class="navbar-brand" href="#" cms-site-name>ST2 Reboot Edition</a>
                             </div>
                             <div wp-call-function="the_custom_logo();" data-pg-name="Brand With Custom Logo" wp-else-if></div>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler6" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'st2' ); ?>"> 
@@ -56,7 +56,7 @@
                     </nav>
                 </div>
                 <div data-pg-name="jumbotron_wrapper" wp-cz-control="show_jumbotron" wp-cz-control-label="Show Jumbotron" wp-cz-control-type="checkbox" wp-cz-control-section="header_settings" wp-if-get-theme-mod="show_jumbotron" wp-cz-control-description="Activate the Jumbotron. Note: It will be visible on ALL the theme templates. If you need a selective display, use the Hero slider or  Hero Canvas widgets and the Widget Logic plugin.">
-                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings">
+                    <div class="jumbotron" cms-editable="jumbotron_bg_color" cms-editable-type="background-color" cms-editable-label="Jumbotron Background color" cms-editable-2="jumbotron_bg_image" cms-editable-label-2="Jumbotron Background image" cms-editable-type-2="background-image" cms-editable-image-size-2="full" cms-editable-section="header_settings" cms-editable-section-2="header_settings" style="background: #AB99C9;">
                         <div class="container">
                             <h1 class="display-3" cms-editable="jumbotron_heading_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Heading Color" cms-editable-style-important cms-editable-section="header_settings">Starter Theme <b>2</b></h1>
                             <p class="lead" cms-editable="jumbotron_text_color" cms-editable-type="text-color" cms-editable-label="Jumbotron Paragraph Color" cms-editable-section="header_settings">Powered by Bootstrap 4 and SASS.</p>
@@ -184,7 +184,7 @@
                         <div class="col-md-12">
                             <footer class="site-footer" id="colophon">
                                 <div class="site-info">
-                                    <p cms-editable="footer_text" cms-editable-type="content" cms-editable-label="Footer Content" cms-editable-section="footer_settings" cms-editable-textarea>Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)</p>
+                                    <p cms-editable="footer_text" cms-editable-type="content" cms-editable-label="Footer Content" cms-editable-section="footer_settings" cms-editable-textarea>Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018-2020. (Version: 0.0.0)</p>
                                 </div>
                                 <!-- .site-info -->
                             </footer>
@@ -196,10 +196,11 @@
                 <!-- container end -->
             </div>
         </div>
-        <script src="assets/js/jquery-1.12.4.min.js" wp-no-export data-pg-name="Local jQuery"></script>
+        <script src="assets/js/jquery.min.js" wp-no-export data-pg-name="Local jQuery"></script>
         <script wp-enqueue-script="jquery" data-pg-name="Enqueue WP jQuery"></script>
         <script src="assets/js/carousel_init.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
         <script src="assets/js/popper.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
         <script src="bootstrap/js/bootstrap.min.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
+        <script src="assets/js/outline.js" wp-enqueue-script wp-enqueue-script-in-footer="true"></script>
     </body>
 </html>

@@ -163,10 +163,10 @@ function st2_customize_register( $wp_customize ) {
 
     /* Pinegrow generated Customizer Controls Begin */
 
-    $wp_customize->add_section( 'footer_settings', array(
-        'title' => __( 'ST2 Footer Settings', 'st2' ),
-        'description' => __( 'Footer Settings', 'st2' ),
-        'priority' => '2'
+    $wp_customize->add_section( 'theme_settings', array(
+        'title' => __( 'ST2 Theme Settings', 'st2' ),
+        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'st2' ),
+        'priority' => '0'
     ));
 
     $wp_customize->add_section( 'header_settings', array(
@@ -175,10 +175,10 @@ function st2_customize_register( $wp_customize ) {
         'priority' => '1'
     ));
 
-    $wp_customize->add_section( 'theme_settings', array(
-        'title' => __( 'ST2 Theme Settings', 'st2' ),
-        'description' => __( 'Theme Settings > CAUTION: Work in Progress', 'st2' ),
-        'priority' => '0'
+    $wp_customize->add_section( 'footer_settings', array(
+        'title' => __( 'ST2 Footer Settings', 'st2' ),
+        'description' => __( 'Footer Settings', 'st2' ),
+        'priority' => '2'
     ));
     $pgwp_sanitize = function_exists('pgwp_sanitize_placeholder') ? 'pgwp_sanitize_placeholder' : null;
 
@@ -265,6 +265,18 @@ function st2_customize_register( $wp_customize ) {
 
     $wp_customize->add_setting( 'footer_text', array(
         'type' => 'theme_mod',
+        'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018-2020. (Version: 0.0.0)',
+        'sanitize_callback' => $pgwp_sanitize
+    ));
+
+    $wp_customize->add_control( 'footer_text', array(
+        'label' => __( 'Footer Content', 'st2' ),
+        'type' => 'textarea',
+        'section' => 'footer_settings'
+    ));
+
+    $wp_customize->add_setting( 'footer_text', array(
+        'type' => 'theme_mod',
         'default' => 'Proudly powered by WordPress | Theme: Starter Theme 2 by Pinegrow 2018. (Version: 0.0.0)',
         'sanitize_callback' => $pgwp_sanitize
     ));
@@ -287,26 +299,31 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
 
         /* Pinegrow generated Enqueue Scripts Begin */
 
-    wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'jquery', null, null, null, true );
 
-    wp_enqueue_script( 'carousel_init', get_template_directory_uri() . '/assets/js/carousel_init.js', null, null, true );
+    wp_enqueue_script( 'st2-carousel_init', get_template_directory_uri() . '/assets/js/carousel_init.js', null, null, true );
 
-    wp_enqueue_script( 'popper', get_template_directory_uri() . '/assets/js/popper.js', null, null, true );
+    wp_enqueue_script( 'st2-popper', get_template_directory_uri() . '/assets/js/popper.js', null, null, true );
 
-    wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', null, null, true );
+    wp_enqueue_script( 'st2-bootstrap', get_template_directory_uri() . '/bootstrap/js/bootstrap.min.js', null, null, true );
+
+    wp_enqueue_script( 'st2-outline', get_template_directory_uri() . '/assets/js/outline.js', null, null, true );
 
     /* Pinegrow generated Enqueue Scripts End */
 
         /* Pinegrow generated Enqueue Styles Begin */
 
-    wp_deregister_style( 'bootstrap' );
-    wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
+    wp_deregister_style( 'st2-bootstrap' );
+    wp_enqueue_style( 'st2-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css', false, null, 'all');
 
-    wp_deregister_style( 'theme' );
-    wp_enqueue_style( 'theme', get_template_directory_uri() . '/css/theme.css', false, null, 'all');
+    wp_deregister_style( 'st2-theme' );
+    wp_enqueue_style( 'st2-theme', get_template_directory_uri() . '/css/theme.css', false, null, 'all');
 
-    wp_deregister_style( 'woocommerce' );
-    wp_enqueue_style( 'woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
+    wp_deregister_style( 'st2-woocommerce' );
+    wp_enqueue_style( 'st2-woocommerce', get_template_directory_uri() . '/css/woocommerce.css', false, null, 'all');
+
+    wp_deregister_style( 'st2-style' );
+    wp_enqueue_style( 'st2-style', get_bloginfo('stylesheet_url'), false, null, 'all');
 
     /* Pinegrow generated Enqueue Styles End */
 
@@ -318,6 +335,8 @@ endif;
  * Resource files included by Pinegrow.
  */
 /* Pinegrow generated Include Resources Begin */
+require_once "inc/custom.php";
+require_once "inc/wp_pg_helpers.php";
 require_once "inc/bootstrap/wp_bootstrap4_navwalker.php";
 
     /* Pinegrow generated Include Resources End */

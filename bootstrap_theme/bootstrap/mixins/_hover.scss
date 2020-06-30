@@ -8,31 +8,30 @@
 // always return their regular pseudo-classes instead of a shimmed media query.
 //
 // Issue: https://github.com/twbs/bootstrap/issues/25195
-@mixin hover {
-    &:hover {
-        @content;
-    }
+
+@mixin hover() {
+  &:hover { @content; }
 }
 
-@mixin hover-focus {
-    &:hover,
-    &:focus {
-        @content;
-    }
+@mixin hover-focus() {
+  &:hover,
+  &:focus {
+    @content;
+  }
 }
 
-@mixin plain-hover-focus {
-    &,
-    &:hover,
-    &:focus {
-        @content;
-    }
+@mixin plain-hover-focus() {
+  &,
+  &:hover,
+  &:focus {
+    @content;
+  }
 }
 
-@mixin hover-focus-active {
-    &:hover,
-    &:focus,
-    &:active {
-        @content;
-    }
+@mixin hover-focus-active() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
 }

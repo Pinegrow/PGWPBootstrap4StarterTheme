@@ -1,4 +1,4 @@
-# Pinegrow WordPress Starter Theme 2
+# Pinegrow WordPress Starter Theme 2 (Version 2.0 Reboot Edition)
 
 ## About
 
@@ -46,11 +46,15 @@ The Pinegrow WordPress Starter Theme is deeply inspired by the [UnderStrap theme
 - Partial templates
 - Minimum CSS styling to ease customization
 - Common templates and custom page templates (see list below)
-- Basic Woocommerce store
-- Jetpack ready
+- Basic Woocommerce store (Validated with WooCommerce version 4.2.2)
 - Fully cutomizable (layout, CSS  with SASS version included, features…)
-- 100% Bootstrap (Currently v4.1.3)
+- 100% Bootstrap (Currently v4.5.0)
 - Translation ready / I18n
+
+# ST2 Custom Settings plugin
+
+Available from the ST2-Custom-Settings-Plugin folder.
+In order to comply with WordPress development guidelines, some features previously available in custom.php are now accessible via a plugin that you can decide whether or not to install.
 
 ## WordPress common templates
 

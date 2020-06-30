@@ -1,15 +1,19 @@
 // Your Custom Theme & WordPress related CSS rules should come here //
 // Edit bootstrap_theme>custom.scss to add/modify custom rules which are "bootstrap related" //
-
 img.wp-post-image,
 article img,
 figure,
 #secondary img {
-margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .wp-caption-text {
-margin-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+figcaption {
+    // display: table-caption; //
+    caption-side: top;
 }
 
 .widget-area aside {
@@ -30,3 +34,45 @@ margin-bottom: 10px;
     word-wrap: break-word;
 }
 
+// Blocks Related Tweaks //
+.wp-block-image figcaption {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    color: #BACBD9!important;
+    text-align: center;
+}
+
+.wp-block-image .alignleft {
+    margin-right: 0 !important;
+}
+
+// ST2 DEMO Related Tweaks //
+@media (min-width: 912px)
+{
+    .jumbotron {
+        padding: 8rem 2rem;
+    }
+}
+
+.woocommerce div.product form.cart div.quantity {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.woocommerce #content table.cart td.actions .input-text,
+.woocommerce table.cart td.actions .input-text,
+.woocommerce-page #content table.cart td.actions .input-text,
+.woocommerce-page table.cart td.actions .input-text {
+    width: 110px;
+}
+
+.woocommerce-MyAccount-navigation {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+#wrapper-navbar img {
+    width: 202px;
+    height: 33px;
+}

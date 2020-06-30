@@ -1,5 +1,4 @@
-/*
-* Use existing Bootstrap 4 classes and
+/* * Use existing Bootstrap 4 classes and
 * variables to extend - override CF7 style
 *
 * Useful CF7 classes:
@@ -9,12 +8,11 @@
 * .wpcf7-text
 * .wpcf7-email
 * .wpcf7-textarea
-* .wpcf7-submit
-*/
+* .wpcf7-submit */
 // keep a max width in case it is just the form and nothing else
 // we do not want a form spanning whole page
 .wpcf7 {
-    max-width: 100%;
+    max-width: 730px;
     margin: 0 auto !important;
 
     // all inputs except radios and checkboxes inherit from form-control

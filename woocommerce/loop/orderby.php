@@ -10,10 +10,9 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     3.3.0
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @package WooCommerce/Templates
+ * @version 3.6.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -22,9 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form class="woocommerce-ordering" method="get">
-	<select name="orderby" class="orderby custom-select">
-		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
-			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
+	<select name="orderby" class="orderby custom-select" aria-label="<?php esc_attr_e( 'Shop order', 'st2' ); ?>">
+		<?php foreach ( $catalog_orderby_options as $option_id => $name ) : ?>
+			<option value="<?php echo esc_attr( $option_id ); ?>" <?php selected( $orderby, $option_id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>
 	</select>
 	<input type="hidden" name="paged" value="1" />
