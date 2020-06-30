@@ -1,4 +1,4 @@
-# Pinegrow WordPress Starter Theme 2 (Version 2.0 Reboot Edition)
+# Pinegrow WordPress Starter Theme 2 Version 2.0 (Reboot Edition)
 
 ## About
 
