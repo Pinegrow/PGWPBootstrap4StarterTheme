@@ -51,7 +51,7 @@ The Pinegrow WordPress Starter Theme is deeply inspired by the [UnderStrap theme
 - 100% Bootstrap (Currently v4.5.0)
 - Translation ready / I18n
 
-# ST2 Custom Settings plugin
+## ST2 Custom Settings plugin
 
 Available from the ST2-Custom-Settings-Plugin folder.
 In order to comply with WordPress development guidelines, some features previously available in custom.php are now accessible via a plugin that you can decide whether or not to install.
