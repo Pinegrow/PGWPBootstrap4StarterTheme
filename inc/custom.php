@@ -317,11 +317,12 @@ add_action('wp_enqueue_scripts', 'st2_comment_reply');
 //* Theme Check Fix sanitization callback function
 //* For new projects function is included in functions.php.
 //* For existing projects needs to be added at the end of functions.php
+//* Already added in functions.php
 
-function pgwp_sanitize_placeholder($input)
+/* function pgwp_sanitize_placeholder($input)
 {
 	return $input;
-}
+} */
 
 
 //* FUNCTIONALITY PLUGIN FEATURES

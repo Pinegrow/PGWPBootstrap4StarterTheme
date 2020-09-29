@@ -331,6 +331,7 @@ if ( ! function_exists( 'st2_enqueue_scripts' ) ) :
     add_action( 'wp_enqueue_scripts', 'st2_enqueue_scripts' );
 endif;
 
+function pgwp_sanitize_placeholder($input) { return $input; }
 /*
  * Resource files included by Pinegrow.
  */
