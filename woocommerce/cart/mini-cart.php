@@ -13,8 +13,8 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package WooCommerce/Templates
- * @version 3.7.0
+ * @package WooCommerce\Templates
+ * @version 5.2.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -44,7 +44,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 						sprintf(
 							'<a href="%s" class="remove remove_from_cart_button" aria-label="%s" data-product_id="%s" data-cart_item_key="%s" data-product_sku="%s">&times;</a>',
 							esc_url( wc_get_cart_remove_url( $cart_item_key ) ),
-							esc_html__( 'Remove this item', 'st2' ),
+							esc_attr__( 'Remove this item', 'st2' ),
 							esc_attr( $product_id ),
 							esc_attr( $cart_item_key ),
 							esc_attr( $_product->get_sku() )
@@ -53,10 +53,10 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 					);
 					?>
 					<?php if ( empty( $product_permalink ) ) : ?>
-						<?php echo $thumbnail . $product_name; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+						<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php else : ?>
 						<a href="<?php echo esc_url( $product_permalink ); ?>">
-							<?php echo $thumbnail . $product_name; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+							<?php echo $thumbnail . wp_kses_post( $product_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 					<?php endif; ?>
 					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 	<p class="woocommerce-mini-cart__total total">
 		<?php
 		/**
-		 * Woocommerce_widget_shopping_cart_total hook.
+		 * Hook: woocommerce_widget_shopping_cart_total.
 		 *
 		 * @hooked woocommerce_widget_shopping_cart_subtotal - 10
 		 */
@@ -93,5 +93,4 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <?php endif; ?>
 
-<?php
-do_action( 'woocommerce_after_mini_cart' );
+<?php do_action( 'woocommerce_after_mini_cart' ); ?>
